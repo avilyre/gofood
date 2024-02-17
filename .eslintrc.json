@@ -1,0 +1,12 @@
+{
+  "extends": "@as-code/eslint-config/react",
+  "plugins": ["simple-import-sort"],
+  "settings": {
+    "react": {
+      "version": "18.2.0"
+    }
+  },
+  "rules": {
+    "simple-import-sort/imports": "error"
+  }
+}
