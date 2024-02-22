@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,6 +18,14 @@ export function SignIn() {
   async function handleSignIn(data: SignInForm) {
     await new Promise(resolve => setTimeout(resolve, 2000));
     console.log(data);
+
+    toast.success("E-mail enviado", {
+      description: "Enviamos um link de autenticação para o seu e-mail.",
+      action: {
+        label: "Reenviar",
+        onClick: () => handleSignIn(data),
+      },
+    });
   }
 
   return (
