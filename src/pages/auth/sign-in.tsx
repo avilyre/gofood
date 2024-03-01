@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -30,7 +31,7 @@ export function SignIn() {
 
   return (
     <Fragment>
-      <Helmet title="SignIn" />
+      <Helmet title="Login" />
       <div className="p-8">
         <div className="w-[350px] flex flex-col justify-center gap-6">
           <div className="flex flex-col text-center gap-2">
@@ -50,6 +51,10 @@ export function SignIn() {
 
             <Button disabled={isSubmitting} className="w-full">
               Acessar painel
+            </Button>
+
+            <Button asChild variant="secondary" className="w-full">
+              <Link to="/sign-up">Novo Estabelecimento</Link>
             </Button>
           </form>
         </div>

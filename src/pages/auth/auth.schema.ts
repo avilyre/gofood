@@ -1,7 +1,10 @@
 import { z } from "zod";
 
-export const signInForm = z.object({
+export const signUpForm = z.object({
+  restaurantName: z.string(),
+  managerName: z.string(),
+  phone: z.string(),
   email: z.string().email(),
 });
 
-export type SignInForm = z.infer<typeof signInForm>;
+export type SignUpForm = z.infer<typeof signUpForm>;
