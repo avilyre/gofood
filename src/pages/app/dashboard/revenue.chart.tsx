@@ -53,6 +53,8 @@ export function RevenueChart() {
                 })
               }
             />
+            <CartesianGrid vertical={false} className="stroke-muted" />
+
             <Line
               stroke={colors["blue"]["500"]}
               type="linear"
